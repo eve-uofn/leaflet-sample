@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bare - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        
+    }
+
+    #map { height: 900px; }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <!-- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <!-- <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            </div> -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul> -->
+            <!-- </div> -->
+            <!-- /.navbar-collapse -->
+       <!--  </div> -->
+        <!-- /.container -->
+   <!--  </nav> --> 
+
+    <!-- Page Content -->
+   
+    <div class="container-fluid">
+        <div class="row">
+        
+
+        
+        <div class="row">
+            <div class="col-md-8">
+
+                <div id="map"></div>
+
+            </div>
+        <div class="row">
+
+        <div class="col-md-3">
+
+            <div>
+                <h3>Sidebar title</h3>
+
+                <p>Chuck pork belly turducken, ham hock flank salami bresaola shankle ball tip pork loin tail. Spare ribs kevin bacon shank, t-bone meatloaf bresaola sausage tenderloin ground round pork andouille. Bacon boudin tail hamburger ham filet mignon prosciutto strip steak shank. Turkey bresaola fatback flank. Beef ribs pig chuck, ground round tri-tip alcatra cupim frankfurter. Shank chicken boudin, frankfurter fatback corned beef kevin pork loin jowl jerky. Hamburger tri-tip pig bresaola, alcatra ball tip pork belly biltong jerky drumstick burgdoggen meatloaf.</p>
+                <p>
+                Drumstick ground round cow pork chop, t-bone biltong pancetta prosciutto shank tongue alcatra picanha landjaeger tail salami. Swine boudin strip steak beef, frankfurter bresaola pork belly andouille venison pastrami cupim tail fatback kevin. Pancetta bresaola meatloaf brisket prosciutto porchetta pork loin, andouille cupim picanha pig jerky. Pancetta andouille bresaola venison. Biltong flank venison, short ribs swine kielbasa beef ribs chicken tri-tip spare ribs.</p>
+                <p>
+                    Jowl shoulder biltong hamburger, strip steak drumstick jerky kielbasa fatback cupim tenderloin. Ham hock meatball pastrami, pork sirloin kevin picanha. Cupim porchetta tail, chicken swine drumstick alcatra turducken boudin shankle sirloin meatloaf pork shoulder. Bacon corned beef prosciutto filet mignon ribeye short loin ham. Ham pancetta short ribs, rump pork andouille strip steak chuck cow ham hock frankfurter shoulder meatball sausage. Short ribs pork chop drumstick, salami beef ribs pig cupim. Leberkas ham hock alcatra ground round pastrami.
+                </p>
+            </div>
+
+        </div>
+
+
+        
+        <!-- /.row -->
+
+    </div>
+
+</div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script>
+//     var mymap = L.map('mapid').setView([40.722108, -73.984723], 15);
+
+//      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
+//         maxZoom: 18,
+//         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+//             '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+//             'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+//         id: 'mapbox.streets'
+//     }).addTo(mymap);
+
+    
+    
+//     var littleton = L.marker([40.723224, -73.984057]).bindPopup('This is Littleton, CO.'),
+//         denver    = L.marker([40.722324, -73.980588]).bindPopup('This is Denver, CO.');
+
+
+    
+//     var cities = L.layerGroup([littleton, denver]);
+
+
+//     var grayscale = L.tileLayer(mapboxUrl, {id: 'MapID', attribution: mapboxAttribution}),
+//     streets   = L.tileLayer(mapboxUrl, {id: 'MapID', attribution: mapboxAttribution});
+
+//     var map = L.map('map', {
+//     center: [40.722108, -73.984723],
+//     zoom: 10,
+//     layers: [grayscale, cities]
+// });
+
+
+var housing = new L.LayerGroup();
+
+   var marker = L.marker([40.723224, -73.984057]).bindPopup('Interfaith Adopt-a-Building', {'className' : '1'}).addTo(housing);
+    L.marker([40.72798, -73.98051]).bindPopup('East 11th Street Movement', {'className' : '2'}).addTo(housing);
+
+
+
+
+var youth = new L.LayerGroup();
+    L.marker([40.724795, -73.978319]).bindPopup('Charas Recycling Center', {'className' : '3'}).addTo(youth);
+   // L.marker([40.721173, -73.979891]).bindPopup('Nena', {'className' : '4'}).addTo(youth);
+     L.marker([40.72798, -73.98051]).bindPopup('East 11th Street Movement', {'className' : '2'}).addTo(youth);
+
+
+   
+
+
+    var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+            '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+            'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+        mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
+
+    var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr}),
+        streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets',   attribution: mbAttr});
+
+    var map = L.map('map', {
+        center: [40.722108, -73.984723],
+        zoom: 15,
+        layers: [grayscale, housing, youth]
+    });
+
+    var baseLayers = {
+        "Grayscale": grayscale,
+        "Streets": streets
+    };
+
+    var overlays = {
+        "Housing": housing,
+        "Youth": youth
+    };
+
+    L.control.layers(baseLayers, overlays).addTo(map);
+
+
+
+
+
+map.on('popupopen', function(e){
+    
+    console.log(e);
+    //console.log(e.popup._content);
+
+    var key = e.popup.options.className;
+
+    console.log(key);
+
+    var htmlPage = key + '.html';
+    console.log(htmlPage);
+
+    $('.col-md-3').load(htmlPage);
+
+})
+
+// $(document).ready(function(){
+//     $(".leaflet-pane img").click(function(){
+
+//         setTimeout(function(){ 
+           
+//            var markerId = $('.leaflet-popup-pane .leaflet-popup .leaflet-popup-content span').attr('id');
+//             console.log(markerId);
+
+//            var htmlPage = markerId + ".html";
+//            console.log(htmlPage);
+
+        
+//             $('.col-md-3').load(htmlPage);
+        
+
+
+
+
+
+
+//         }, 300);
+        
+        
+//     });
+// });
+
+
+
+    </script>
+
+</body>
+
+</html>
